@@ -17,5 +17,5 @@ RUN useradd coderedcms
 RUN chown -R coderedcms /code
 USER coderedcms
 
-EXPOSE 8000
-CMD exec gunicorn egelab.wsgi:application --bind 0.0.0.0:8000 --workers 3
+EXPOSE 8080
+CMD exec gunicorn egelab.wsgi:application --bind 0.0.0.0:8080 --workers 3
