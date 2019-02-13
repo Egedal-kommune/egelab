@@ -10,7 +10,11 @@ from coderedcms.models import (
     CoderedFormPage,
     CoderedWebPage
 )
+from django.db import models
 
+from wagtail.core.models import Page
+from wagtail.core.fields import RichTextField
+from wagtail.admin.edit_handlers import FieldPanel
 
 class ArticlePage(CoderedArticlePage):
     """
@@ -78,3 +82,12 @@ class WebPage(CoderedWebPage):
         verbose_name = 'Web Page'
 
     template = 'coderedcms/pages/web_page.html'
+
+class Maps(Page):
+    """
+    Create maps with Leaflet
+    """
+    class Meta:
+        verbose_name = 'Kort'
+
+    template = 'egelab/pages/maps.html'
