@@ -6,3 +6,6 @@ django_sendmail_backend
 
 # To use with a MySQL database (offered by most web hosts), uncomment the following.
 #mysqlclient
+
+# Whitenoise to handle static files
+whitenoise
